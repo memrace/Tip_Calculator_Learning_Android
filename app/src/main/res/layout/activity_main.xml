@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:columnCount="2"
+        android:useDefaultMargins="true"
+        tools:context=".MainActivity">
+
+
+        <EditText
+            android:id="@+id/amountEditText"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:autofillHints="no"
+            android:background="@color/new_background"
+            android:gravity="start"
+
+            android:hint="@string/enter_amount"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.513"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/amountTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amountEditText" />
+
+        <TextView
+            android:id="@+id/percentTextView"
+            android:layout_width="40sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+            android:text="@string/default_perc"
+            app:layout_constraintBottom_toTopOf="@+id/tipLabelTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amountEditText" />
+
+        <TextView
+            android:id="@+id/totalLabelTextView"
+            android:layout_width="40sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+            android:text="@string/total"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tipLabelTextView" />
+
+        <TextView
+            android:id="@+id/tipLabelTextView"
+            android:layout_width="40sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+            android:text="@string/tip"
+            app:layout_constraintBottom_toTopOf="@+id/totalLabelTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/percentTextView" />
+
+        <SeekBar
+            android:id="@+id/percentSeekBar"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:max="30"
+            android:progress="15"
+            android:text="@string/percentseekbar"
+            app:layout_constraintBottom_toTopOf="@+id/tipTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/percentTextView"
+            app:layout_constraintTop_toBottomOf="@+id/amountEditText" />
+
+        <TextView
+            android:id="@+id/tipTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+
+            app:layout_constraintBottom_toTopOf="@+id/totalTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tipLabelTextView"
+            app:layout_constraintTop_toBottomOf="@+id/percentSeekBar" />
+
+        <TextView
+            android:id="@+id/totalTextView"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/totalLabelTextView"
+            app:layout_constraintTop_toBottomOf="@+id/tipTextView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
